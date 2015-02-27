@@ -12,7 +12,7 @@
 		C6C50FA41AA11BE600218EC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C50FA31AA11BE600218EC4 /* Images.xcassets */; };
 		C6C50FA71AA11BE600218EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C50FA51AA11BE600218EC4 /* Main.storyboard */; };
 		C6C50FB31AA11BE600218EC4 /* SwiftMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C50FB21AA11BE600218EC4 /* SwiftMonitorTests.swift */; };
-		C6C50FBD1AA11BF100218EC4 /* FileMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C50FBC1AA11BF100218EC4 /* FileMonitor.swift */; };
+		C6C510121AA12B6800218EC4 /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C510111AA12B6800218EC4 /* FolderMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		C6C50FAC1AA11BE600218EC4 /* SwiftMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C50FB11AA11BE600218EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C50FB21AA11BE600218EC4 /* SwiftMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMonitorTests.swift; sourceTree = "<group>"; };
-		C6C50FBC1AA11BF100218EC4 /* FileMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileMonitor.swift; sourceTree = "<group>"; };
+		C6C510111AA12B6800218EC4 /* FolderMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderMonitor.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			children = (
 				C6C50F9F1AA11BE600218EC4 /* AppDelegate.swift */,
 				C6C50FA11AA11BE600218EC4 /* ViewController.swift */,
-				C6C50FBC1AA11BF100218EC4 /* FileMonitor.swift */,
+				C6C510111AA12B6800218EC4 /* FolderMonitor.swift */,
 				C6C50FA31AA11BE600218EC4 /* Images.xcassets */,
 				C6C50FA51AA11BE600218EC4 /* Main.storyboard */,
 				C6C50F9D1AA11BE600218EC4 /* Supporting Files */,
@@ -212,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C50FA21AA11BE600218EC4 /* ViewController.swift in Sources */,
+				C6C510121AA12B6800218EC4 /* FolderMonitor.swift in Sources */,
 				C6C50FA01AA11BE600218EC4 /* AppDelegate.swift in Sources */,
-				C6C50FBD1AA11BF100218EC4 /* FileMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +404,7 @@
 				C6C50FB81AA11BE600218EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6C50FB91AA11BE600218EC4 /* Build configuration list for PBXNativeTarget "SwiftMonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +413,7 @@
 				C6C50FBB1AA11BE600218EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
