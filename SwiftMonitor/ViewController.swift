@@ -10,16 +10,26 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    private var monitor: FolderMonitor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createMonitorIfNot()
+    }
+    
+    func createMonitorIfNot() {
+        let url = NSURL(fileURLWithPath: "~/Desktop".stringByExpandingTildeInPath)!
+        monitor = monitor ?? FolderMonitor(url: url, handler: {
+            println("Found change")
+        })
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    @IBAction func startMonitor(sender: AnyObject?) {
+        createMonitorIfNot()
+    }
+
+    @IBAction func stopMonitor(sender: AnyObject?) {
+        monitor = nil
     }
 
 
