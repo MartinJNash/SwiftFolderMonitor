@@ -22,6 +22,7 @@ class ViewController: NSViewController {
         monitor = monitor ?? FolderMonitor(url: url, handler: {
             println("Found change")
         })
+        println("Monitoring '\(url)'")
     }
 
     @IBAction func startMonitor(sender: AnyObject?) {
