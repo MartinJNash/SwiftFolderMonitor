@@ -13,14 +13,16 @@ open class FolderMonitor {
     fileprivate var state: State = .off
     
     /// Creates a folder monitor object with monitoring enabled.
-    public init(url: URL, handler: ()->Void) {
+    public init(url: URL, handler: @escaping ()->Void) {
 
         state = .off
         descriptor = open((url as NSURL).fileSystemRepresentation, O_EVTONLY)
         
         source = DispatchSource.makeFileSystemObjectSource(fileDescriptor: descriptor, eventMask: DispatchSource.FileSystemEvent.write, queue: qq) /*Migrator FIXME: Use DispatchSourceFileSystemObject to avoid the cast*/ as! DispatchSource
         
-        source.setEventHandler(handler: handler)
+        source.setEventHandler { 
+            handler()
+        }
         start()
     }
     
